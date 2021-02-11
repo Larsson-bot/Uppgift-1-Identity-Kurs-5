@@ -18,6 +18,7 @@ namespace Uppgift_1_Identity_Kurs_5.Data
             var _identity = await base.GenerateClaimsAsync(user);
             _identity.AddClaim(new Claim("DisplayName", user.DisplayName ?? ""));
             return _identity;
+            //comment
         }
     }
 }
