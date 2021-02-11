@@ -1,0 +1,3 @@
+﻿@model IdentityRole
+
+@Html.DropDownListFor(model => model.Id, new SelectList(ViewBag.Roles, "Id", "Name"), "Välj Roll")
