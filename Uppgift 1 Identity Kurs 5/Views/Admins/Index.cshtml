@@ -1,0 +1,19 @@
+﻿@model IdentityRole
+@*@Html.DropDownListFor(model => model.Roles.Id, new SelectList(ViewBag.Roles, "Id", "Name"), "Välj Roll")
+    @Html.DropDownListFor(model => model.Users, new SelectList(ViewBag.Users, "Id", "FirstName"), "Välj Användare")*@
+
+<link rel="stylesheet" href="~/css/site.css" />
+<div class="row">
+    <div class="card-group">
+        @foreach (var user in ViewBag.Users)
+        {
+            <div class="card " style="width: 25rem;">
+                <img src="~/Images/526cdbe5-ce68-4422-947e-639cfc7ddb3f_200x200.png" class="card-img-top w-25 h-25 D-flex Justify-Content-Center" alt="...">
+                <div class="card-body">
+                    <p class="card-text">@user.FirstName @user.LastName</p>
+                    <p>@user.Role</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

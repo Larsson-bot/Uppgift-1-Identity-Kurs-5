@@ -22,5 +22,7 @@ namespace Uppgift_1_Identity_Kurs_5.Data
 
         [PersonalData]
         public string DisplayName => $"{FirstName} {LastName}";
+
+        //public virtual SchoolClass Classes { get; set;}
     }
 }

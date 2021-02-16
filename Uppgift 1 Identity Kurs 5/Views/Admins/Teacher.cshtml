@@ -1,0 +1,9 @@
+﻿@model UserViewModel
+<h2>Teachers</h2>
+
+@foreach (var user in ViewBag.Teachers)
+{
+    <p>@user.FirstName  @user.LastName (@user.Role)  </p>
+}
+
+@Html.DropDownListFor(model => model.Id, new SelectList(ViewBag.Teachers,"Id", "DisplayName"), "Välj Lärare")

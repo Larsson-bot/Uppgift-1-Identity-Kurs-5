@@ -11,16 +11,25 @@ namespace Uppgift_1_Identity_Kurs_5.Controllers
     {
         private readonly IUserService _userService;
 
+
+
         public UsersController(IUserService userService)
         {
             _userService = userService;
         }
 
-        public IActionResult Index()
+      
+
+        public async Task<IActionResult> Index()
         {
             ViewBag.Roles = _userService.GetAllRoles();
-
+            ViewBag.Users = await _userService.GetAllUsers();
             return View();
         }
+
+        //public async Task<IActionResult> Create()
+        //{
+
+        //}
     }
 }

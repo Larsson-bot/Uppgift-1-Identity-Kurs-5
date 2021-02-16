@@ -1,3 +1,18 @@
 ﻿@model IdentityRole
 
-@Html.DropDownListFor(model => model.Id, new SelectList(ViewBag.Roles, "Id", "Name"), "Välj Roll")
+@*@Html.DropDownListFor(model => model.Roles.Id, new SelectList(ViewBag.Roles, "Id", "Name"), "Välj Roll")
+@Html.DropDownListFor(model => model.Users, new SelectList(ViewBag.Users, "Id", "FirstName"), "Välj Användare")*@
+<div class="row col-md-12 ">
+    @foreach (var user in ViewBag.Users)
+    {
+        <div class="card m-4" style="width: 16rem;">
+            <span class="text-placement">
+                <img src="~/Images/Message 4.jpg" class="card-img-top image-class rounded-circle  " alt="...">
+            </span>
+            <div class="card-body">
+                <h6 class="card-text text-placement mt-1">@user.FirstName @user.LastName</h6>
+                <p class="text-placement">@user.Role</p>
+            </div>
+        </div>
+    }
+</div>

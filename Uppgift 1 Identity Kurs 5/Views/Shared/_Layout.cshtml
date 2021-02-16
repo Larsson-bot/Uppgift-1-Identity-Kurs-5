@@ -17,27 +17,49 @@
                         <a class="nav-link active" asp-controller="Users" asp-action="Index">Users</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">Roles</a>
+                        <a class="nav-link active" asp-controller="Admins" asp-action="Register">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Settings</a>
+                        <a class="nav-link active" asp-controller="Admins" asp-action="Teacher">Register</a>
                     </li>
                 </ul>
             </div>
-        }
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-                <img class="img-fluid" src="~/Images/526cdbe5-ce68-4422-947e-639cfc7ddb3f_200x200.png">
-                <a class="navbar-brand" href="#">AdministrationPortal</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarText">
-               
-                    <partial name="_LoginPartial" />
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+
+                    <img class="img-logo" src="~/Images/526cdbe5-ce68-4422-947e-639cfc7ddb3f_200x200.png">
+
+
+                    <a class="navbar-brand" href="#">AdministrationPortal</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
-            </div>
-        </nav>>
+            </nav>
+        }
+        else
+        { <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="nav-link active p-0" asp-controller="Users" asp-action="Index">
+                        <img class="img-logo " src="/Images/addef8cf-7e7e-4dea-b1c0-228ab858c26d_200x200.png" >
+                    </a>
+
+                    <a class="navbar-brand ms-3 nav-link active" asp-controller="Users" asp-action="Index">EC Education</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </nav>}
+
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
